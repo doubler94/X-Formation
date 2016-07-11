@@ -1,0 +1,9 @@
+<h3>Repositories</h3>
+<div class="list-group">
+    <div class="list-group-item" ng-repeat="user in users | orderBy: 'contributions' : '-nickname'">
+        <h4>Nickname: <i>{{user.nickname}}</i><br/>
+            <small>Team: <i>{{user.team}}</i></small>
+        </h4>
+        <p>Contributions: <i>{{user.contributions}}</i></p>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+body {
+    font-family: Verdana;
+    text-align: center;
+}
+
+div.naglowek {
+    text-align: center;
+    background-color: #CDC7C7;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    min-width: 600px;
+    padding-top: 15px;
+    font-size: 18px;
+    height: 130px;
+}
+
+div.srodek {
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #C6C0C0;
+    min-height: 150px;
+    background-color: #C6C0C0;
+    height: 100%;
+}
+
+div.stopka {
+    background-color: #413C3C;
+    color: white;
+    clear: both;
+}
+
+button.btn-default{
+    background-color: #f8f8f8;
+    color: #413C3C;
+}

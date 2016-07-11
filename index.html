@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Aleksandra Hoffman</title>
+    <script type="text/javascript" src="libs/angular.js"></script>
+    <script type="text/javascript" src="libs/angular-route.js"></script>
+    <script type="text/javascript" src="libs/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script type="text/javascript" src="app/app.js"></script>
+</head>
+
+<body ng-controller="TestController">
+<div class="container">
+    <div class="naglowek">
+        <h1>Recruitment test - Aleksandra Hoffman</h1>
+    </div>
+    <div class="srodek">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <a class="btn btn-default btn-lg" href="#/index">Main page</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-default btn-lg" href="#/contributions">Contributions</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-default btn-lg" href="#/repositories">Repositories</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    <div class="stopka">Aleksandra Hoffman© 2016</div>
+</div>
+</body>
+</html>

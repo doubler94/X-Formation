@@ -3,14 +3,16 @@
     var app = angular.module('myApp', ['ngRoute']);
 
     app.controller('TestController', ['$scope', '$http', function ($scope, $http) {
-        $http.get('contributors.json').success(function (data) { 
-            $scope.users = data;
-        });
+        $scope.getMyData = function (fileName) {
+            $http.get(fileName).success(function (data) {
+                $scope.users = data;
+            });
+            return true;
+        };
     }]); //TestController
 
     app.config(['$routeProvider',
-        function ($routeProvider, $locationProvider) {
-            // $locationProvider.html5Mode(true);
+        function ($routeProvider) {
             $routeProvider
                 .when('/index', {
                     templateUrl: 'page/index.html',

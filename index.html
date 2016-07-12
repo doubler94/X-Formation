@@ -5,8 +5,15 @@
     <title>Aleksandra Hoffman</title>
     <script type="text/javascript" src="libs/angular.js"></script>
     <script type="text/javascript" src="libs/angular-route.min.js"></script>
-    <script type="text/javascript" src="node_modules/octonode/lib/octonode.js"></script>
+    <script type="text/javascript" src="libs/jQuery.js"></script>
+    <script type="text/javascript" src="libs/FileSaver.min.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/git.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#my-github-projects").loadRepositories("X-Formation");
+        });
+    </script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -24,10 +31,10 @@
                 <a class="btn btn-default btn-lg" href="#/index">Main page</a>
             </div>
             <div class="col-sm-2">
-                <a class="btn btn-default btn-lg" href="#/contributions" ng-click="getMyData('contributors.json')">Contributions</a>
+                <a class="btn btn-default btn-lg" href="#/contributions" ng-click="getMyUser('file/contributors.json')">Contributions</a>
             </div>
             <div class="col-sm-2">
-                <a class="btn btn-default btn-lg" href="#/repositories" ng-click="getMyData('contributors.json')">Repositories</a>
+                <a class="btn btn-default btn-lg" href="#/repositories" ng-click="getMyRepo('file/repositories.json')">Repositories</a>
             </div>
             <div class="col-sm-2">
                 <a class="btn btn-default btn-lg" href="page/SpecRunner.html">Unit test</a>

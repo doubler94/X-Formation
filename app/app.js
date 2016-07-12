@@ -3,9 +3,16 @@
     var app = angular.module('myApp', ['ngRoute']);
 
     app.controller('TestController', ['$scope', '$http', function ($scope, $http) {
-        $scope.getMyData = function (fileName) {
+        $scope.getMyUser = function (fileName) {
             $http.get(fileName).success(function (data) {
                 $scope.users = data;
+            });
+            return true;
+        };
+
+        $scope.getMyRepo = function (fileName) {
+            $http.get(fileName).success(function (data) {
+                $scope.repositiories = data;
             });
             return true;
         };

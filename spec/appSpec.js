@@ -7,9 +7,13 @@ describe('TestController', function () {
         ctrl = $controller('TestController', {$scope: scope});
         scope.$digest();
     }));
-    var fileName = "contributors.json";
+    var fileUserName = "contributors.json";
 
-    it('should return TRUE and the data has been loaded', function () {
-        expect(scope.getMyData(fileName)).toEqual(true);
+    it('should return TRUE and the data about contributions has been loaded', function () {
+        expect(scope.getMyUser(fileUserName)).toEqual(true);
+    });
+
+    it('should return TRUE and the data about repositories has been loaded', function () {
+        expect(scope.getMyRepo(fileRepoName)).toEqual(true);
     });
 });

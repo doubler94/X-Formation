@@ -1,0 +1,46 @@
+<h3>Repositories</h3>
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+    <div class="row">
+        <div class="col-sm-3">
+            <h4>Name</h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>ID</h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>Default branch</h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>Forks count</h4>
+        </div>
+        <div class="col-sm-1">
+            <h4>Size</h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>Watchers</h4>
+        </div>
+    </div>
+    <div class="row" ng-repeat="repo in repositiories | orderBy : 'forks_count': '-name'">
+        <div class="col-sm-3">
+            <b><i>{{repo.name}}</i></b><br/>
+            <small><i>{{repo.description}}</i></small>
+            <br/><br/>
+        </div>
+        <div class="col-sm-2">
+            <i>{{repo.id}}</i>
+        </div>
+        <div class="col-sm-2">
+            <i>{{repo.default_branch}}</i>
+        </div>
+        <div class="col-sm-2">
+            <b><i>{{repo.forks_count}}</i></b>
+        </div>
+        <div class="col-sm-1">
+            <i>{{repo.size}}</i>
+        </div>
+        <div class="col-sm-2">
+            <i>{{repo.watchers_count}}</i>
+        </div>
+    </div>
+</div>

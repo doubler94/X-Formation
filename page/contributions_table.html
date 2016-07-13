@@ -1,0 +1,28 @@
+<h3>Contributions</h3>
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>Nickname</h4>
+        </div>
+        <div class="col-sm-4">
+            <h4>Team</h4>
+        </div>
+        <div class="col-sm-4">
+            <h4>Contributions</h4>
+        </div>
+    </div>
+    <div class="row" ng-repeat="user in users | orderBy: 'contributions' : 'nickname'">
+        <div class="col-sm-4">
+            <i>{{user.nickname}}</i>
+        </div>
+        <div class="col-sm-4">
+            <i>{{user.team}}</i>
+        </div>
+        <div class="col-sm-4">
+            <b><i>{{user.contributions}}</i></b>
+        </div>
+    </div>
+</div>
+</div>
+</div>

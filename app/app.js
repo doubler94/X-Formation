@@ -29,8 +29,16 @@
                     templateUrl: 'page/contributions.html',
                     controller: 'TestController'
                 }, null)
+                .when('/contributionsTable', {
+                    templateUrl: 'page/contributions_table.html',
+                    controller: 'TestController'
+                }, null)
                 .when('/repositories', {
                     templateUrl: 'page/repositories.html',
+                    controller: 'TestController'
+                }, null)
+                .when('/repositoriesTable', {
+                    templateUrl: 'page/repositories_table.html',
                     controller: 'TestController'
                 }, null)
                 .otherwise({

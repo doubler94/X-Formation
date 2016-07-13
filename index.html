@@ -9,11 +9,11 @@
     <script type="text/javascript" src="libs/FileSaver.min.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/git.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#my-github-projects").loadRepositories("X-Formation");
-        });
-    </script>
+    <!--<script type="text/javascript">-->
+    <!--$(function() {-->
+    <!--$("#my-github-projects").loadRepositories("X-Formation");-->
+    <!--});-->
+    <!--</script>-->
 
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -26,26 +26,35 @@
     </div>
     <div class="srodek">
         <div class="row">
-            <div class="col-sm-1"></div>
             <div class="col-sm-2">
-                <a class="btn btn-default btn-lg" href="#/index">Main page</a>
+                <a class="btn btn-default btn-lg" href="#/contributions" ng-click="getMyUser('file/contributors.json')">Contributions
+                    <small>(list)</small>
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-default btn-lg" href="#/contributionsTable"
+                   ng-click="getMyUser('file/contributors.json')">Contributions
+                    <small>(table)</small>
+                </a>
             </div>
             <div class="col-sm-2">
-                <a class="btn btn-default btn-lg" href="#/contributions" ng-click="getMyUser('file/contributors.json')">Contributions</a>
+                <a class="btn btn-default btn-lg" href="#/repositories" ng-click="getMyRepo('file/repositories.json')">Repositories
+                    <small>(list)</small>
+                </a>
             </div>
-            <div class="col-sm-2">
-                <a class="btn btn-default btn-lg" href="#/repositories" ng-click="getMyRepo('file/repositories.json')">Repositories</a>
+            <div class="col-sm-3">
+                <a class="btn btn-default btn-lg" href="#/repositoriesTable"
+                   ng-click="getMyRepo('file/repositories.json')">Repositories
+                    <small>(table)</small>
+                </a>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <a class="btn btn-default btn-lg" href="page/SpecRunner.html">Unit test</a>
             </div>
         </div>
         <hr/>
         <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-5">
-                <div ng-view></div>
-            </div>
+            <div ng-view></div>
         </div>
     </div>
     <div class="stopka">Aleksandra Hoffman© 2016</div>

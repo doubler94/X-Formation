@@ -1,19 +1,22 @@
 <h3>Repositories</h3>
-<div class="list-group">
-    <div class="list-group-item" ng-repeat="repo in repositiories | orderBy : 'forks_count': '-name'">
-        <h4>Name: <i>{{repo.name}}</i><br/>
-            <small><i>{{repo.description}}</i></small>
-        </h4>
-        <p>ID: <i>{{repo.id}}</i></p>
-        <p>Default branch: <i>{{repo.default_branch}}</i></p>
-        <p><b>Forks count: <i>{{repo.forks_count}}</i></b></p>
-        <p>Size: <i>{{repo.size}}</i></p>
-        <p>Watchers: <i>{{repo.watchers_count}}</i></p>
-        <small>
-            Created: <i>{{repo.created_at}}</i><br>
-            Updated: <i>{{repo.updated_at}}</i><br/>
-            Pushed: <i>{{repo.pushed_at}}</i>
-        </small>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="list-group">
+        <div class="list-group-item" ng-repeat="repo in repositiories | orderBy : 'forks_count': '-name'">
+            <h4>Name: <i>{{repo.name}}</i><br/>
+                <small><i>{{repo.description}}</i></small>
+            </h4>
+            <p>ID: <i>{{repo.id}}</i></p>
+            <p>Default branch: <i>{{repo.default_branch}}</i></p>
+            <p><b>Forks count: <i>{{repo.forks_count}}</i></b></p>
+            <p>Size: <i>{{repo.size}}</i></p>
+            <p>Watchers: <i>{{repo.watchers_count}}</i></p>
+            <small>
+                Created: <i>{{repo.created_at}}</i><br>
+                Updated: <i>{{repo.updated_at}}</i><br/>
+                Pushed: <i>{{repo.pushed_at}}</i>
+            </small>
+        </div>
     </div>
 </div>
 

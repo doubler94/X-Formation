@@ -8,6 +8,7 @@ describe('TestController', function () {
         scope.$digest();
     }));
     var fileUserName = "contributors.json";
+    var fileRepoName = "repositories.json";
 
     it('should return TRUE and the data about contributions has been loaded', function () {
         expect(scope.getMyUser(fileUserName)).toEqual(true);

@@ -1,3 +1,6 @@
+// code to save data from repositories to .json
+// it was used once time, at beginning
+
 jQuery.githubUser = function (username, callback) {
     jQuery.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', callback);
 }
@@ -8,8 +11,6 @@ jQuery.fn.loadRepositories = function (username) {
     var target = this;
     $.githubUser(username, function (data) {
         var repos = data.data; // JSON Parsing
-        // sortByName(repos);
-
         var list = $('<dl/>');
         target.empty().append(list);
         $(repos).each(function () {
@@ -17,19 +18,11 @@ jQuery.fn.loadRepositories = function (username) {
                 list.append('<dt><a href="' + (this.homepage ? this.homepage : this.html_url) + '">' + this.name + '</a> <em>' + (this.language ? ('(' + this.language + ')') : '') + '</em></dt>');
                 list.append('<dd>' + this.description + '</dd>');
 
-                // var json = JSON.stringify(data);
-                // var blob = new Blob([json], {type: "application/json"});
-                // var saveAs = window.saveAs;
-                // saveAs(blob, "repositories.json");
-
+                var json = JSON.stringify(data);
+                var blob = new Blob([json], {type: "application/json"});
+                var saveAs = window.saveAs;
+                saveAs(blob, "repositories.json");
             }
         });
     });
-
-    // function sortByName(repos) {
-    //     repos.sort(function (a, b) {
-    //         return a.name - b.name;
-    //     });
-    // }
-
 };

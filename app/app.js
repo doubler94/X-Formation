@@ -25,12 +25,12 @@
                     templateUrl: 'page/index.html',
                     controller: 'TestController'
                 }, null)
-                .when('/contributions', {
-                    templateUrl: 'page/contributions.html',
+                .when('/contributors', {
+                    templateUrl: 'page/contributors.html',
                     controller: 'TestController'
                 }, null)
-                .when('/contributionsTable', {
-                    templateUrl: 'page/contributions_table.html',
+                .when('/contributorsTable', {
+                    templateUrl: 'page/contributors_table.html',
                     controller: 'TestController'
                 }, null)
                 .when('/repositories', {

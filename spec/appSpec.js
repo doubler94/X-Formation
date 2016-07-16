@@ -8,13 +8,13 @@ describe('TestController', function () {
         scope.$digest();
     }));
     var fileUserName = "contributors.json";
-    var fileRepoName = "repositories.json";
+    var fileRepoPath = "https://api.github.com/users/x-formation/repos";
 
     it('should return TRUE and the data about contributions has been loaded', function () {
         expect(scope.getMyUser(fileUserName)).toEqual(true);
     });
 
     it('should return TRUE and the data about repositories has been loaded', function () {
-        expect(scope.getMyRepo(fileRepoName)).toEqual(true);
+        expect(scope.getMyRepo(fileRepoPath)).toEqual(true);
     });
 });
